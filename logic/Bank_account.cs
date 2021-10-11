@@ -13,15 +13,19 @@ namespace logic
         }
 
         protected string _social_security_number;
+        protected double _balance;
+        protected double _interest_rate;
 
-        public Bank_account(string social_security_number)
+        public Bank_account(string social_security_number, double balance, double interest_rate)
         {
             this._social_security_number = social_security_number;
+            this._balance = balance;
+            this._interest_rate = interest_rate;
         }
 
         public override string ToString() 
         {
-            return $"Bank account {this._social_security_number}";
+            return $"{this._social_security_number}: {this._balance} ({this._interest_rate})";
         }
     }
 }
