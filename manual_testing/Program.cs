@@ -8,7 +8,12 @@ namespace manual_testing
         static void Main(string[] args)
         {
             Savings_account savings_account = new Savings_account("111122334444");
-            Console.WriteLine(savings_account);
+            Bank_account.record.Add(savings_account);
+
+            Credit_account credit_account = new Credit_account("111122334444");
+            Bank_account.record.Add(credit_account);
+
+            Console.WriteLine(Bank_account.record_string());
         }
     }
 }

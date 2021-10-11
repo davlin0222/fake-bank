@@ -8,5 +8,10 @@ namespace logic
         {
 
         }
+        
+        public override string ToString() 
+        {
+            return $"Credit account {base._social_security_number}";
+        }
     }
 }
