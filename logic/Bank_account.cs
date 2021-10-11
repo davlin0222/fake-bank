@@ -25,7 +25,7 @@ namespace logic
 
         public override string ToString() 
         {
-            return $"{this._social_security_number}: {this._balance} ({this._interest_rate})";
+            return $"{this._social_security_number}: ${this._balance} ({Math.Floor((this._interest_rate - 1) * 100)}%)";
         }
     }
 }
