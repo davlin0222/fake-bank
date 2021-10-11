@@ -7,10 +7,8 @@ namespace manual_testing
     {
         static void Main(string[] args)
         {
-            Bank_account bank_account = new Bank_account();
-            Console.WriteLine(bank_account);
-            
-            Console.WriteLine("Hello World!");
+            Savings_account savings_account = new Savings_account("111122334444");
+            Console.WriteLine(savings_account);
         }
     }
 }
