@@ -27,5 +27,17 @@ namespace logic
         {
             return $"{this._social_security_number}: ${this._balance} ({Math.Floor((this._interest_rate - 1) * 100)}%)";
         }
+
+        public void deposit(double amount)
+        {
+            this._balance += amount;
+        }
+
+        public virtual bool withdraw(double amount) {
+            if (amount > this._balance) return false;
+
+            this._balance -= amount;
+            return true;
+        }
     }
 }

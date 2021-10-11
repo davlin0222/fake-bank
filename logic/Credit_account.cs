@@ -15,5 +15,12 @@ namespace logic
         {
             return $"Credit account {base.ToString()} - Credit limit: ${this._credit_limit}";
         }
+
+        public override bool withdraw(double amount) {
+            if (amount > this._balance + this._credit_limit) return false;
+            
+            this._balance -= amount;
+            return true;
+        }
     }
 }
