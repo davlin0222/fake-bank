@@ -11,9 +11,9 @@ namespace logic
             this._credit_limit = credit_limit;
         }
         
-        public override string ToString() 
+        public override void deposit(double amount)
         {
-            return $"Credit account {base.ToString()} - Credit limit: ${this._credit_limit}";
+            base._balance += amount;
         }
 
         public override bool withdraw(double amount) {
@@ -21,6 +21,11 @@ namespace logic
             
             this._balance -= amount;
             return true;
+        }
+        
+        public override string ToString() 
+        {
+            return $"Credit account {base.ToString()} - Credit limit: ${this._credit_limit}";
         }
     }
 }

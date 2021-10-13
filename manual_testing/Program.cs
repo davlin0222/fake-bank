@@ -18,6 +18,7 @@ namespace manual_testing
             credit_account.deposit(50);
             Console.WriteLine($"credit_account.withdraw(300) // {credit_account.withdraw(300)}");
             Console.WriteLine($"credit_account.withdraw(500) // {credit_account.withdraw(500)}");
+            Console.WriteLine($"credit_account.calculate_interest() // {credit_account.calculate_interest()}");
 
             Console.WriteLine();
             Console.WriteLine(Bank_account.record_string());
