@@ -5,13 +5,6 @@ namespace logic
 {
     public abstract class Bank_account
     {
-        public static List<Bank_account> record = new List<Bank_account>();
-
-        public static string record_string()
-        {
-            return String.Join("\n", record);
-        }
-
         protected string _social_security_number;
         protected double _balance;
         protected double _interest_rate;
